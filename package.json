@@ -1,14 +1,16 @@
 {
-  "name": "vue-section",
+  "name": "user-section",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "build:wc": "vue-cli-service build --target wc --inline-vue --name vue-section-user"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-loader": "^16.5.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {

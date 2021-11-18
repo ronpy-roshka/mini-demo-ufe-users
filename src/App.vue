@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="alert alert-success" role="alert">Microfrontend Usuarios</div>
+
+    <Usuarios :user="tarado"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Usuarios from "./components/Usuarios.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  props: {
+    tarado: {
+      type: String,
+      required: false,
+    },
+  },
   components: {
-    HelloWorld
-  }
-}
+    Usuarios,
+  },
+};
 </script>
 
 <style lang="scss">
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
